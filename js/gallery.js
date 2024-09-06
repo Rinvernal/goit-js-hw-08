@@ -83,7 +83,11 @@ gallery.innerHTML = galleryItems;
 
 gallery.addEventListener("click", event => {
   event.preventDefault();
+  const imgModal = (event.target.dataset.source);
+  const instance = basicLightbox.create(`<img src = "${imgModal}">`)
+  instance.show();
 });
+
 
 // for (const {preview, original, description} of images) {
 //   console.log(preview);
